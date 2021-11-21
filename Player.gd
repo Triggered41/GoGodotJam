@@ -28,7 +28,7 @@ func input():
 			
 		if Input.is_action_just_released("ui_right") and available_dir[3]:
 			movedir.x = speed
-
+			
 func check_junc():
 	for i in range(4):
 		var ray = rays.get_child(i)
@@ -36,4 +36,4 @@ func check_junc():
 			available_dir[i] = true
 		else:
 			available_dir[i] = false
-	
+
