@@ -8,9 +8,20 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Area2D",
+"class": "Point",
+"language": "GDScript",
+"path": "res://Points.gd"
+} ]
+_global_script_class_icons={
+"Point": ""
+}
+
 [application]
 
 config/name="Go Godot Jam"
+run/main_scene="res://Node2D.tscn"
 config/icon="res://icon.png"
 
 [physics]
