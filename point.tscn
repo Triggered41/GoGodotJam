@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://point.gd" type="Script" id=1]
+
+[node name="point" type="RigidBody2D" groups=["junction"]]
+mode = 3
+mass = 0.01
+gravity_scale = 0.0
+contacts_reported = 1
+contact_monitor = true
+script = ExtResource( 1 )
+
+[connection signal="body_entered" from="." to="." method="_on_RigidBody2D_body_entered"]

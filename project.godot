@@ -9,13 +9,13 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Area2D",
-"class": "Point",
+"base": "RigidBody2D",
+"class": "point",
 "language": "GDScript",
-"path": "res://Points.gd"
+"path": "res://point.gd"
 } ]
 _global_script_class_icons={
-"Point": ""
+"point": ""
 }
 
 [application]

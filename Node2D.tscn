@@ -7,18 +7,8 @@
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 
-[node name="WireNode" parent="." instance=ExtResource( 3 )]
-modulate = Color( 0.392157, 0.294118, 0.294118, 1 )
-position = Vector2( 508, 265 )
+[node name="RigidBody2D" parent="." instance=ExtResource( 3 )]
+position = Vector2( 558, 260 )
 
-[node name="WireNode2" parent="." instance=ExtResource( 3 )]
-modulate = Color( 0.392157, 0.294118, 0.294118, 1 )
-position = Vector2( 508, 98 )
-
-[node name="WireNode3" parent="." instance=ExtResource( 3 )]
-modulate = Color( 0.392157, 0.294118, 0.294118, 1 )
-position = Vector2( 752, 84 )
-
-[node name="WireNode4" parent="." instance=ExtResource( 3 )]
-modulate = Color( 0.392157, 0.294118, 0.294118, 1 )
-position = Vector2( 770, 431 )
+[node name="RigidBody2D2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 558, 94 )

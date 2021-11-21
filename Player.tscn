@@ -19,25 +19,24 @@ texture = ExtResource( 2 )
 position = Vector2( 0.5, -0.5 )
 shape = SubResource( 1 )
 
-[node name="Junction_check" type="Node" parent="."]
+[node name="Junction_check" type="Node2D" parent="."]
 
-[node name="junc_check" type="RayCast2D" parent="Junction_check"]
-position = Vector2( 341, 262 )
-enabled = true
-cast_to = Vector2( 0, 300 )
-
-[node name="junc_check2" type="RayCast2D" parent="Junction_check"]
-position = Vector2( 341, 261 )
-enabled = true
-cast_to = Vector2( 300, 0 )
-
-[node name="junc_check3" type="RayCast2D" parent="Junction_check"]
-position = Vector2( 341, 261 )
+[node name="junc_checku" type="RayCast2D" parent="Junction_check"]
+position = Vector2( 0, -38 )
 enabled = true
 cast_to = Vector2( 0, -300 )
 
-[node name="junc_check4" type="RayCast2D" parent="Junction_check"]
-position = Vector2( 341, 261 )
+[node name="junc_checkd" type="RayCast2D" parent="Junction_check"]
+position = Vector2( 0, 41 )
 enabled = true
-exclude_parent = false
+cast_to = Vector2( 0, 300 )
+
+[node name="junc_checkL" type="RayCast2D" parent="Junction_check"]
+position = Vector2( -42, 0 )
+enabled = true
 cast_to = Vector2( -300, 0 )
+
+[node name="junc_checkR" type="RayCast2D" parent="Junction_check"]
+position = Vector2( 42, 0 )
+enabled = true
+cast_to = Vector2( 300, 0 )
