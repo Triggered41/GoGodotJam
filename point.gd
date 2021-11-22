@@ -1,14 +1,13 @@
-extends RigidBody2D
+extends Area2D
 
 class_name point
 
 var player
 var can_create = true
 
-
 func player_to_pos():
 	if player:
-		player.global_position = lerp(player.global_position, global_position, 0.6)
+		player.global_position = lerp(player.global_position, global_position, 0.7)
 		player.movedir = Vector2.ZERO
 		if can_create:
 			create_timer(0.05)

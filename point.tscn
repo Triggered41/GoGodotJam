@@ -2,5 +2,5 @@
 
 [ext_resource path="res://point.gd" type="Script" id=1]
 
-[node name="point" type="RigidBody2D" groups=["junction"]]
+[node name="point" type="Area2D" groups=["junction"]]
 script = ExtResource( 1 )

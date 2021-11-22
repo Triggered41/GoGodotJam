@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 163, 12 )
+
+[node name="Wire" type="StaticBody2D" groups=["wire"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Icon" type="Sprite" parent="."]
+scale = Vector2( 5, 0.5 )
+texture = ExtResource( 1 )
