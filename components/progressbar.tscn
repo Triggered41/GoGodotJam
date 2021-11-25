@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://components/progressbar.gd" type="Script" id=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+modulate = Color( 0.988235, 0.580392, 0.101961, 1 )
+margin_left = 235.0
+margin_top = 110.0
+margin_right = 772.0
+margin_bottom = 189.0
+percent_visible = false
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
