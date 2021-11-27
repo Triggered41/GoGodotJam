@@ -2,7 +2,7 @@
 
 [ext_resource path="res://bulb.gd" type="Script" id=1]
 [ext_resource path="res://Levels/Assets/LevelsTileMap.png" type="Texture" id=2]
-[ext_resource path="res://Light256.png" type="Texture" id=3]
+[ext_resource path="res://assets/Light256.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8, 16 )
@@ -24,8 +24,8 @@ region_enabled = true
 region_rect = Rect2( 0, 48, 16, 32 )
 
 [node name="Light2D" type="Light2D" parent="."]
+enabled = false
 texture = ExtResource( 3 )
-energy = 0.5
 shadow_enabled = true
 
 [node name="Area2D" type="Area2D" parent="."]

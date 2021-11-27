@@ -14,6 +14,7 @@ var ghosts_in_area = []
 func _physics_process(delta):
 	player_to_pos()
 
+
 func _on_bulb_body_entered(body):
 	if body.is_in_group("player"):
 		player = body
