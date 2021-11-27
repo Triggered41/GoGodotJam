@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/electrical_wire_8.wav-96713fd94cdccc5d327509beee582922.sample"
+
+[deps]
+
+source_file="res://assets/electrical_wire_8.wav"
+dest_files=[ "res://.import/electrical_wire_8.wav-96713fd94cdccc5d327509beee582922.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
