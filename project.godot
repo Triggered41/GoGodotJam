@@ -8,11 +8,29 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Area2D",
+"class": "point",
+"language": "GDScript",
+"path": "res://point.gd"
+} ]
+_global_script_class_icons={
+"point": ""
+}
+
 [application]
 
-config/name="Go Godot Jam"
-run/main_scene="res://menu/mainmenu.tscn"
+config/name="Gg Jam"
+run/main_scene="res://Levels/Node2D.tscn"
 config/icon="res://icon.png"
+
+[input]
+
+fire={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
 
 [physics]
 
