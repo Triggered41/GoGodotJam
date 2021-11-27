@@ -2,8 +2,8 @@ extends Node2D
 
 signal reached
 
-export var min_speed = 70.0
-export var max_speed = 250.0
+export var min_speed = 30.0
+export var max_speed = 100.0
 
 var initial_pos = Vector2.ZERO
 var is_reached = true
@@ -11,16 +11,18 @@ var target = Vector2.ZERO
 var direction = Vector2.ZERO
 
 func _ready():
+	randomize()
 	hide()
 
-	# spawn(Vector2(0, 0))
-	# set_target(Vector2(500 , 500))
+	var types = $AnimatedSprite.frames.get_animation_names()
+	$AnimatedSprite.playing = true
+	$AnimatedSprite.animation = types[rand_range(0, types.size() - 1)]
 
 func _process(delta):
-	$AnimatedSprite.play()
-	$AnimatedSprite.look_at(target)
 	
 	if (!is_reached):
+		flip_sprite()
+
 		var last = position
 		position += direction * get_speed() * delta
 	
@@ -58,6 +60,12 @@ func get_speed():
 func set_pos(pos: Vector2):
 	position.x = pos.x
 	position.y = pos.y
+
+func flip_sprite():
+	if target.x > position.x:
+		$AnimatedSprite.flip_h = true
+	else:
+		$AnimatedSprite.flip_h = false
 
 func clamp_pos():
 	if target.x > initial_pos.x:
