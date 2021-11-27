@@ -12,7 +12,7 @@ var direction = Vector2.ZERO
 
 func _ready():
 	randomize()
-	hide()
+	#hide()
 
 	var types = $AnimatedSprite.frames.get_animation_names()
 	$AnimatedSprite.playing = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://WireNode.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://assets/japan_tile_set.tres" type="TileSet" id=4]
 [ext_resource path="res://bulb.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/Wire.png" type="Texture" id=6]
+[ext_resource path="res://enemies/Ghost.tscn" type="PackedScene" id=7]
 
 [sub_resource type="TileSet" id=1]
 0/name = "tilemap.png 0"
@@ -292,7 +293,7 @@ tile_data = PoolIntArray( 262151, 1, 0, 262155, 0, 0, 262157, 3, 0, 262168, 5, 0
 
 [node name="Wires" type="StaticBody2D" parent="." groups=["wire"]]
 collision_layer = 2
-collision_mask = 0
+collision_mask = 2
 
 [node name="Wire" type="TileMap" parent="Wires"]
 tile_set = SubResource( 7 )
@@ -329,3 +330,6 @@ position = Vector2( 232, 24 )
 position = Vector2( 272, 96 )
 current = true
 zoom = Vector2( 0.5, 0.5 )
+
+[node name="Ghost" parent="." instance=ExtResource( 7 )]
+position = Vector2( 208, 104 )

@@ -10,7 +10,6 @@ var is_on = false setget _set_on
 var ghosts_in_area = []
 
 
-
 func _physics_process(delta):
 	player_to_pos()
 
@@ -39,7 +38,7 @@ func _set_on(new) -> void:
 func _process(delta: float) -> void:
 	if is_on:
 		for i in ghosts_in_area:
-			ray.cast_to = global_position - i.global_position
+			ray.cast_to = i.global_position - global_position
 			ray.force_raycast_update()
 			if ray.get_collider() == i:
 				i.kill()
