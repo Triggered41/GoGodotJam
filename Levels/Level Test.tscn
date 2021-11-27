@@ -288,6 +288,7 @@ tile_data = PoolIntArray( 65541, 5, 0, 65542, 5, 0, 65543, 5, 0, 65544, 5, 0, 65
 tile_set = SubResource( 1 )
 cell_size = Vector2( 16, 16 )
 format = 1
+tile_data = PoolIntArray( 262151, 1, 0, 262155, 0, 0, 262157, 3, 0, 262168, 5, 0, 327704, 14, 0, 393222, 10, 0, 393231, 3, 0, 393239, 8, 0, 393243, 11, 0, 458758, 4, 0, 524313, 12, 0, 655371, 9, 0 )
 
 [node name="Wires" type="StaticBody2D" parent="." groups=["wire"]]
 collision_layer = 2
