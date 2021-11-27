@@ -21,11 +21,9 @@ func _on_bulb_body_entered(body):
 	
 
 func _on_bulb_body_exited(body):
-	can_create = true
-	self.is_on = false
-	
-	player = body
-	is_on = true
+	if body.is_in_group("player"):
+		can_create = true
+		self.is_on = false
 
 
 func bulb_state():
