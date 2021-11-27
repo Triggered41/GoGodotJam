@@ -45,7 +45,7 @@ cast_to = Vector2( 30, 0 )
 shape = SubResource( 2 )
 
 [node name="Icon" type="Sprite" parent="Area2D"]
-modulate = Color( 0, 0, 0, 1 )
+modulate = Color( 0, 0.647059, 1, 1 )
 texture = ExtResource( 2 )
 
 [connection signal="mouse_entered" from="." to="." method="_on_Player_mouse_entered"]
