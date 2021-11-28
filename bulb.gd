@@ -42,6 +42,7 @@ func _process(delta: float) -> void:
 			ray.force_raycast_update()
 			if ray.get_collider() == i:
 				i.kill()
+				ghosts_in_area.erase(i)
 
 
 func _on_Area2D_body_entered(body: Node) -> void:
