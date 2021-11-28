@@ -4,7 +4,7 @@
 [ext_resource path="res://icon.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 29, 30 )
+extents = Vector2( 8, 7 )
 
 [node name="Junction" type="Area2D" groups=["junction"]]
 script = ExtResource( 1 )
@@ -13,6 +13,7 @@ script = ExtResource( 1 )
 shape = SubResource( 1 )
 
 [node name="Icon" type="Sprite" parent="."]
+scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 2 )
 
 [connection signal="body_entered" from="." to="." method="_on_RigidBody2D_body_entered"]

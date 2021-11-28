@@ -24,6 +24,11 @@ config/name="Gg Jam"
 run/main_scene="res://Levels/Node2D.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/stretch/mode="2d"
+window/stretch/aspect="expand"
+
 [input]
 
 fire={

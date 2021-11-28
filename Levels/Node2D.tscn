@@ -1,47 +1,74 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://WireNode.tscn" type="PackedScene" id=2]
 [ext_resource path="res://bulb.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Wire.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Levels/level_objects_tilemap.tres" type="TileSet" id=5]
+[ext_resource path="res://Levels/levels_room_tilemap.tres" type="TileSet" id=6]
+[ext_resource path="res://enemies/Ghost.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Levels/level.gd" type="Script" id=8]
 
-[node name="Node2D" type="Node2D"]
+[node name="BasicLevel" type="Node2D"]
+script = ExtResource( 8 )
+
+[node name="Room" type="TileMap" parent="."]
+tile_set = ExtResource( 6 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 458770, 15, 0, 458771, 1073741847, 0, 458772, 1073741847, 0, 458773, 1073741847, 0, 458774, 1073741847, 0, 458775, 1073741847, 0, 458776, 1073741847, 0, 458777, 1073741847, 0, 458778, 1073741847, 0, 458779, 15, 0, 524306, 15, 0, 524307, 1073741840, 0, 524308, 11, 0, 524309, 11, 0, 524310, 11, 0, 524311, 11, 0, 524312, 11, 0, 524313, 11, 0, 524314, 1073741840, 0, 524315, 15, 0, 589842, 15, 0, 589843, 1073741840, 0, 589844, 10, 0, 589845, 10, 0, 589846, 10, 0, 589847, 10, 0, 589848, 10, 0, 589849, 10, 0, 589850, 1073741840, 0, 589851, 15, 0, 655378, 15, 0, 655379, 1073741840, 0, 655380, 6, 0, 655381, 6, 0, 655382, 6, 0, 655383, 6, 0, 655384, 6, 0, 655385, 6, 0, 655386, 16, 0, 655387, 15, 0, 720914, 15, 0, 720915, 1073741840, 0, 720916, 6, 0, 720917, 6, 0, 720918, 6, 0, 720919, 6, 0, 720920, 6, 0, 720921, 6, 0, 720922, 16, 0, 720923, 15, 0, 786450, 15, 0, 786451, 1073741840, 0, 786452, 6, 0, 786453, 6, 0, 786454, 6, 0, 786455, 6, 0, 786456, 6, 0, 786457, 6, 0, 786458, 16, 0, 786459, 15, 0, 851986, 15, 0, 851987, 1073741840, 0, 851988, 6, 0, 851989, 6, 0, 851990, 6, 0, 851991, 6, 0, 851992, 6, 0, 851993, 6, 0, 851994, 16, 0, 851995, 15, 0, 917522, 15, 0, 917523, 1073741840, 0, 917524, 6, 0, 917525, 6, 0, 917526, 6, 0, 917527, 6, 0, 917528, 6, 0, 917529, 6, 0, 917530, 1073741840, 0, 917531, 15, 0, 983058, 15, 0, 983059, 1073741840, 0, 983060, 1073741840, 0, 983061, 1073741840, 0, 983062, 1073741840, 0, 983063, 1073741840, 0, 983064, 1073741840, 0, 983065, 1073741840, 0, 983066, 1073741840, 0, 983067, 15, 0, 1048594, 15, 0, 1048595, 15, 0, 1048596, 15, 0, 1048597, 15, 0, 1048598, 15, 0, 1048599, 15, 0, 1048600, 15, 0, 1048601, 15, 0, 1048602, 15, 0, 1048603, 15, 0 )
+
+[node name="Objects" type="TileMap" parent="."]
+tile_set = ExtResource( 5 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 655382, 536870920, 0, 720917, 536870919, 0, 720918, 536870918, 0, 720919, 536870925, 0, 720920, 536870919, 0, 786454, 14, 0, 851990, 536870920, 0 )
 
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="RigidBody2D" parent="Node2D" instance=ExtResource( 2 )]
-position = Vector2( 766, 490 )
+position = Vector2( 424, 248 )
 
 [node name="RigidBody2D2" parent="Node2D" instance=ExtResource( 2 )]
-position = Vector2( 764, 91 )
+position = Vector2( 312, 248 )
 
 [node name="RigidBody2D3" parent="Node2D" instance=ExtResource( 2 )]
-position = Vector2( 599, 91 )
+position = Vector2( 424, 136 )
 
 [node name="RigidBody2D4" parent="Node2D" instance=ExtResource( 2 )]
-position = Vector2( 188, 86 )
-
-[node name="RigidBody2D5" parent="Node2D" instance=ExtResource( 2 )]
-position = Vector2( 190, 495 )
+position = Vector2( 312, 136 )
 
 [node name="bulb" parent="Node2D" instance=ExtResource( 3 )]
-position = Vector2( 361, 490 )
+position = Vector2( 424, 192 )
 
 [node name="Wire2" parent="Node2D" instance=ExtResource( 4 )]
-position = Vector2( 766, 289 )
+position = Vector2( 424, 220 )
 rotation = 1.57079
+scale = Vector2( 0.46139, 0.88222 )
 
 [node name="Wire5" parent="Node2D" instance=ExtResource( 4 )]
-position = Vector2( 184, 291 )
+position = Vector2( 424, 164 )
 rotation = 1.57079
+scale = Vector2( 0.43896, 0.490321 )
 
 [node name="Wire3" parent="Node2D" instance=ExtResource( 4 )]
-position = Vector2( 564, 491 )
-rotation = 3.14159
+position = Vector2( 312, 192 )
+rotation = 4.71238
+scale = Vector2( 1.14636, 1.10988 )
 
 [node name="Wire4" parent="Node2D" instance=ExtResource( 4 )]
-position = Vector2( 388, 89 )
+position = Vector2( 368, 248 )
 rotation = 3.14159
+scale = Vector2( 1.13807, 1.08229 )
 
 [node name="Player" parent="Node2D" instance=ExtResource( 1 )]
-position = Vector2( 764, 91 )
+position = Vector2( 424, 136 )
+speed = 3.0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 368, 192 )
+current = true
+zoom = Vector2( 0.3, 0.3 )
+
+[node name="Node2D2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 384, 240 )

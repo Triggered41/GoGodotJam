@@ -4,10 +4,10 @@
 [ext_resource path="res://icon.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 30.5, 30.5 )
+extents = Vector2( 8, 8 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 30, 30 )
+extents = Vector2( 8, 7 )
 
 [node name="Player" type="KinematicBody2D" groups=["player"]]
 z_index = 1
@@ -20,22 +20,22 @@ shape = SubResource( 1 )
 [node name="Junction_check" type="Node2D" parent="."]
 
 [node name="junc_checku" type="RayCast2D" parent="Junction_check"]
-position = Vector2( 0, -38 )
+position = Vector2( 0, -15 )
 enabled = true
 cast_to = Vector2( 0, -30 )
 
 [node name="junc_checkd" type="RayCast2D" parent="Junction_check"]
-position = Vector2( 0, 41 )
+position = Vector2( 0, 15 )
 enabled = true
 cast_to = Vector2( 0, 30 )
 
 [node name="junc_checkL" type="RayCast2D" parent="Junction_check"]
-position = Vector2( -42, 0 )
+position = Vector2( -15, 0 )
 enabled = true
 cast_to = Vector2( -30, 0 )
 
 [node name="junc_checkR" type="RayCast2D" parent="Junction_check"]
-position = Vector2( 42, 0 )
+position = Vector2( 15, 0 )
 enabled = true
 cast_to = Vector2( 30, 0 )
 
@@ -46,6 +46,7 @@ shape = SubResource( 2 )
 
 [node name="Icon" type="Sprite" parent="Area2D"]
 modulate = Color( 0, 0.647059, 1, 1 )
+scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 2 )
 
 [connection signal="mouse_entered" from="." to="." method="_on_Player_mouse_entered"]

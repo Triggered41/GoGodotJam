@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
 export var speed = 10.0
+export var radius = 64
 
 onready var rays = $Junction_check
 
@@ -62,7 +63,7 @@ func player_to_mouse():
 	if can_move:
 		var dir = get_global_mouse_position() - pos
 		var length = dir.length()
-		length = clamp(length, 0, 150)
+		length = clamp(length, 0, radius)
 		global_position = pos + dir.normalized()*length
 
 #Self Explanatory
