@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ghost1.png-02bad5e0db8fd4aab2470afe193387e2.stex"
+path="res://.import/Wire.png-842efeba9bea33f60cd81f4943e650df.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ghost1.png"
-dest_files=[ "res://.import/ghost1.png-02bad5e0db8fd4aab2470afe193387e2.stex" ]
+source_file="res://assets/Wire.png"
+dest_files=[ "res://.import/Wire.png-842efeba9bea33f60cd81f4943e650df.stex" ]
 
 [params]
 

@@ -12,7 +12,7 @@ var direction = Vector2.ZERO
 
 func _ready():
 	randomize()
-	hide()
+	#hide()
 
 	var types = $AnimatedSprite.frames.get_animation_names()
 	$AnimatedSprite.playing = true
@@ -49,7 +49,9 @@ func spawn(pos: Vector2):
 	show()
 
 func kill():
-	hide()
+	$AnimatedSprite.hide()
+	$CPUParticles2D.emitting = true
+	yield(get_tree().create_timer(1), "timeout")
 	queue_free()
 
 # helper functions

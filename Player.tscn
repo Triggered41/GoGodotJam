@@ -1,16 +1,15 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 30.5, 30.5 )
-
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 30, 30 )
+extents = Vector2( 8, 8 )
 
 [node name="Player" type="KinematicBody2D" groups=["player"]]
 z_index = 1
+collision_layer = 0
+collision_mask = 2
 input_pickable = true
 script = ExtResource( 1 )
 
@@ -20,33 +19,44 @@ shape = SubResource( 1 )
 [node name="Junction_check" type="Node2D" parent="."]
 
 [node name="junc_checku" type="RayCast2D" parent="Junction_check"]
-position = Vector2( 0, -38 )
+position = Vector2( 0, -4 )
 enabled = true
-cast_to = Vector2( 0, -30 )
+cast_to = Vector2( 0, -8 )
+collision_mask = 2
 
 [node name="junc_checkd" type="RayCast2D" parent="Junction_check"]
-position = Vector2( 0, 41 )
+position = Vector2( 0, 4 )
 enabled = true
-cast_to = Vector2( 0, 30 )
+cast_to = Vector2( 0, 8 )
+collision_mask = 2
 
 [node name="junc_checkL" type="RayCast2D" parent="Junction_check"]
-position = Vector2( -42, 0 )
+position = Vector2( -4, 0 )
 enabled = true
-cast_to = Vector2( -30, 0 )
+cast_to = Vector2( -8, 0 )
+collision_mask = 2
 
 [node name="junc_checkR" type="RayCast2D" parent="Junction_check"]
-position = Vector2( 42, 0 )
+position = Vector2( 4, 0 )
 enabled = true
-cast_to = Vector2( 30, 0 )
+cast_to = Vector2( 8, 0 )
+collision_mask = 2
 
 [node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource( 2 )
+collision_layer = 2
+collision_mask = 2
 
 [node name="Icon" type="Sprite" parent="Area2D"]
+visible = false
 modulate = Color( 0, 0.647059, 1, 1 )
 texture = ExtResource( 2 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 1 )
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color( 0.454902, 0.827451, 0.886275, 1 )
+polygon = PoolVector2Array( 2, -4, 4, -2, 4, 2, 2, 4, -2, 4, -4, 2, -4, -2, -2, -4 )
 
 [connection signal="mouse_entered" from="." to="." method="_on_Player_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_Player_mouse_exited"]
